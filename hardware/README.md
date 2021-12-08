@@ -28,7 +28,8 @@ You have to modify these lines to correct the absolute path on your local machin
 3- Then, when Vivado came up, go to the `Tools` and click `Run Tcl Script...`. 
 Select `build.tcl` and compile it.
 It might take seconds or minutes to ultimately create the project, including the block design. 
-`TODO add picture`
+
+<img src="https://github.com/UofT-HPRC/galapagos_aes/blob/main/hardware/PNGs/read_tcl.png" width="600"/>
 
 4- Search for `IP INTEGRATOR` under `Flow Navigator`, click `Open Block Design`, and open `pr.bd`.
 You don't have anything to do with `shell.bd` unless you were curious about it.
@@ -44,14 +45,15 @@ You can use any MAC address you want, but I suggest modifying only 8 LSB bits.
 P.S: Any questions regarding `Gulf-Stream` should be asked from Clark who developed this UDP bridge.
 This is the main GitHub repo of `Gulf-Stream`: https://github.com/UofT-HPRC/GULF-Stream.git
 
-<img src="https://github.com/UofT-HPRC/galapagos_aes/blob/main/hardware/PNGs/gulf_stream.png" width="400"/>
+<img src="https://github.com/UofT-HPRC/galapagos_aes/blob/main/hardware/PNGs/gulf_stream.png" width="600"/>
 
 4.2- Double click on `ip_constant_block_inst` and modify all four parameters. 
 These parameters should be the same as what you configured in the previous step (4.1).
 One thing you should notice here is that `IP Address` should be filled in reverse order. 
 For instance, in the picture below, the address I used was `10.1.5.8`, so I filled it in reverse like `8.5.1.10`.
 Other fields should be filled as always.
-`TODO add picture`
+
+<img src="https://github.com/UofT-HPRC/galapagos_aes/blob/main/hardware/PNGs/ip_constant_block.png" width="600"/>
 
 4.3- Double click on `blk_mem_gen_0`, go to the other options, and click `Edit` to edit the Coe file.
 You have to add all the ip addresses you use for Galapagos kernels you have in your project.
@@ -66,6 +68,8 @@ For the kernels on CPU, we used ip address `10.1.2.101`, which is equal to `1678
 For the kernels on FPGA, we used ip address `10.1.5.8`, which is equal to `167838984` in decimal.
 Also, it is worth mentioning that you have to separate different ip addresses by writing three 0s like what we did in our example `0 0 0`. 
 Finally, save the file.
+
+<img src="https://github.com/UofT-HPRC/galapagos_aes/blob/main/hardware/PNGs/ip.coe.png" width="600"/>
 
 5- By now, after modifying all the things explained above, you should be ready to generate the bitstreams.
 To do so, click the `Generate Bitstream`.
