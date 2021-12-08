@@ -44,7 +44,7 @@ You can use any MAC address you want, but I suggest modifying only 8 LSB bits.
 P.S: Any questions regarding `Gulf-Stream` should be asked from Clark who developed this UDP bridge.
 This is the main GitHub repo of `Gulf-Stream`: https://github.com/UofT-HPRC/GULF-Stream.git
 
-`TODO add picture`
+<img src="https://github.com/UofT-HPRC/galapagos_aes/blob/main/hardware/PNGs/gulf_stream.png" width="400"/>
 
 4.2- Double click on `ip_constant_block_inst` and modify all four parameters. 
 These parameters should be the same as what you configured in the previous step (4.1).
