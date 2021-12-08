@@ -15,23 +15,6 @@
 #   run results please launch the synthesis/implementation runs as needed.
 #
 #*****************************************************************************************
-# NOTE: In order to use this script for source control purposes, please make sure that the
-#       following files are added to the source control system:-
-#
-# 1. This project restoration tcl script (build.tcl) that was generated.
-#
-# 2. The following source(s) files that were local or imported into the original project.
-#    (Please see the '$orig_proj_dir' and '$origin_dir' variable setting below at the start of the script)
-#
-#    "/home/mahdi/finalProjects/rsaCPUaesFPGA/1/1.srcs/sources_1/imports/srcs/shellTop.v"
-#    "/home/mahdi/finalProjects/rsaCPUaesFPGA/1/1.srcs/sources_1/imports/test2/ip.coe"
-#    "/home/mahdi/finalProjects/rsaCPUaesFPGA/1/1.srcs/constrs_1/imports/constraints/sidewinder100.xdc"
-#
-# 3. The following remote source files that were added to the original project:-
-#
-#    <none>
-#
-#*****************************************************************************************
 
 # Set the reference directory for source file relative paths (by default the value is script directory path)
 set origin_dir "."
