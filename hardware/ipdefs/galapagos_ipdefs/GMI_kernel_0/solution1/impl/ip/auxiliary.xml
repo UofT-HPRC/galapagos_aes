@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="kernel" xd:componentRef="kernel" xd:initiationInterval="x" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="ID" xd:originalName="ID" xd:direction="in" xd:interfaceRef="ID_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="8"/>
+  <xd:arg xd:name="in_bcast.data" xd:originalName="in_bcast" xd:direction="in" xd:interfaceRef="in_bcast" xd:busTypeRef="axis" xd:dataWidth="64"/>
+  <xd:arg xd:name="in_bcast.dest" xd:originalName="in_bcast" xd:direction="in" xd:interfaceRef="in_bcast" xd:busTypeRef="axis" xd:dataWidth="8"/>
+  <xd:arg xd:name="in_bcast.last" xd:originalName="in_bcast" xd:direction="in" xd:interfaceRef="in_bcast" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="in_bcast.id" xd:originalName="in_bcast" xd:direction="in" xd:interfaceRef="in_bcast" xd:busTypeRef="axis" xd:dataWidth="8"/>
+  <xd:arg xd:name="in_bcast.user" xd:originalName="in_bcast" xd:direction="in" xd:interfaceRef="in_bcast" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="in_bcast.keep" xd:originalName="in_bcast" xd:direction="in" xd:interfaceRef="in_bcast" xd:busTypeRef="axis" xd:dataWidth="8"/>
+  <xd:arg xd:name="out_bcast.data" xd:originalName="out_bcast" xd:direction="out" xd:interfaceRef="out_bcast" xd:busTypeRef="axis" xd:dataWidth="64"/>
+  <xd:arg xd:name="out_bcast.dest" xd:originalName="out_bcast" xd:direction="out" xd:interfaceRef="out_bcast" xd:busTypeRef="axis" xd:dataWidth="8"/>
+  <xd:arg xd:name="out_bcast.last" xd:originalName="out_bcast" xd:direction="out" xd:interfaceRef="out_bcast" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="out_bcast.id" xd:originalName="out_bcast" xd:direction="out" xd:interfaceRef="out_bcast" xd:busTypeRef="axis" xd:dataWidth="8"/>
+  <xd:arg xd:name="out_bcast.user" xd:originalName="out_bcast" xd:direction="out" xd:interfaceRef="out_bcast" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="out_bcast.keep" xd:originalName="out_bcast" xd:direction="out" xd:interfaceRef="out_bcast" xd:busTypeRef="axis" xd:dataWidth="8"/>
+  <xd:arg xd:name="in_reduce.data" xd:originalName="in_reduce" xd:direction="in" xd:interfaceRef="in_reduce" xd:busTypeRef="axis" xd:dataWidth="64"/>
+  <xd:arg xd:name="in_reduce.dest" xd:originalName="in_reduce" xd:direction="in" xd:interfaceRef="in_reduce" xd:busTypeRef="axis" xd:dataWidth="8"/>
+  <xd:arg xd:name="in_reduce.last" xd:originalName="in_reduce" xd:direction="in" xd:interfaceRef="in_reduce" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="in_reduce.id" xd:originalName="in_reduce" xd:direction="in" xd:interfaceRef="in_reduce" xd:busTypeRef="axis" xd:dataWidth="8"/>
+  <xd:arg xd:name="in_reduce.user" xd:originalName="in_reduce" xd:direction="in" xd:interfaceRef="in_reduce" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="in_reduce.keep" xd:originalName="in_reduce" xd:direction="in" xd:interfaceRef="in_reduce" xd:busTypeRef="axis" xd:dataWidth="8"/>
+  <xd:arg xd:name="out_reduce.data" xd:originalName="out_reduce" xd:direction="out" xd:interfaceRef="out_reduce" xd:busTypeRef="axis" xd:dataWidth="64"/>
+  <xd:arg xd:name="out_reduce.dest" xd:originalName="out_reduce" xd:direction="out" xd:interfaceRef="out_reduce" xd:busTypeRef="axis" xd:dataWidth="8"/>
+  <xd:arg xd:name="out_reduce.last" xd:originalName="out_reduce" xd:direction="out" xd:interfaceRef="out_reduce" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="out_reduce.id" xd:originalName="out_reduce" xd:direction="out" xd:interfaceRef="out_reduce" xd:busTypeRef="axis" xd:dataWidth="8"/>
+  <xd:arg xd:name="out_reduce.user" xd:originalName="out_reduce" xd:direction="out" xd:interfaceRef="out_reduce" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="out_reduce.keep" xd:originalName="out_reduce" xd:direction="out" xd:interfaceRef="out_reduce" xd:busTypeRef="axis" xd:dataWidth="8"/>
+  <xd:arg xd:name="debug_in.data" xd:originalName="debug_in" xd:direction="in" xd:interfaceRef="debug_in" xd:busTypeRef="axis" xd:dataWidth="64"/>
+  <xd:arg xd:name="debug_in.dest" xd:originalName="debug_in" xd:direction="in" xd:interfaceRef="debug_in" xd:busTypeRef="axis" xd:dataWidth="8"/>
+  <xd:arg xd:name="debug_in.last" xd:originalName="debug_in" xd:direction="in" xd:interfaceRef="debug_in" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="debug_in.id" xd:originalName="debug_in" xd:direction="in" xd:interfaceRef="debug_in" xd:busTypeRef="axis" xd:dataWidth="8"/>
+  <xd:arg xd:name="debug_in.user" xd:originalName="debug_in" xd:direction="in" xd:interfaceRef="debug_in" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="debug_in.keep" xd:originalName="debug_in" xd:direction="in" xd:interfaceRef="debug_in" xd:busTypeRef="axis" xd:dataWidth="8"/>
+  <xd:arg xd:name="debug_out.data" xd:originalName="debug_out" xd:direction="out" xd:interfaceRef="debug_out" xd:busTypeRef="axis" xd:dataWidth="64"/>
+  <xd:arg xd:name="debug_out.dest" xd:originalName="debug_out" xd:direction="out" xd:interfaceRef="debug_out" xd:busTypeRef="axis" xd:dataWidth="8"/>
+  <xd:arg xd:name="debug_out.last" xd:originalName="debug_out" xd:direction="out" xd:interfaceRef="debug_out" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="debug_out.id" xd:originalName="debug_out" xd:direction="out" xd:interfaceRef="debug_out" xd:busTypeRef="axis" xd:dataWidth="8"/>
+  <xd:arg xd:name="debug_out.user" xd:originalName="debug_out" xd:direction="out" xd:interfaceRef="debug_out" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="debug_out.keep" xd:originalName="debug_out" xd:direction="out" xd:interfaceRef="debug_out" xd:busTypeRef="axis" xd:dataWidth="8"/>
+  <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="5790" xd:FF="4791" xd:BRAM="14" xd:DSP="4"/>
+</xd:acceleratorMap>

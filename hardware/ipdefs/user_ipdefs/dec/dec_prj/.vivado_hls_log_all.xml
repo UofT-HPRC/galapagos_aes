@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Port 'kern_dec/id' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.619-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_175' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.586-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_174' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.579-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_173' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.571-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_172' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.565-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_171' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.558-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_170' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.552-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_169' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.546-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_168' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.539-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_167' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.533-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_166' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.526-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_165' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.518-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_164' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.513-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_163' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.506-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_162' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.500-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_161' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.495-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_160' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.488-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_159' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.482-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_158' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.476-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_157' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.470-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_156' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.463-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_155' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.456-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_154' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.451-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_153' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.445-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_152' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.438-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_151' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.433-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_150' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.427-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_149' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.421-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_148' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.416-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_147' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.411-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_146' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.403-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_145' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.397-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_144' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.390-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_143' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.385-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_142' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.380-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_141' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.373-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_140' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.368-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_139' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.363-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_138' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.357-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_137' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.352-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_136' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.347-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_135' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.327-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_134' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.321-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_133' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.316-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_132' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.311-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_131' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.306-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_130' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.302-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_129' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.297-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_128' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.292-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_127' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.288-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_126' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.283-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_125' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.278-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_124' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.271-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_123' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.264-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_122' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.256-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_121' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.248-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_120' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.240-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_119' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.232-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_118' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.224-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_117' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.217-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_116' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.209-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_115' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.201-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_114' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.193-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_113' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.186-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_112' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.179-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_111' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.171-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_110' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.163-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_109' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.156-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_108' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.151-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_107' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.147-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_106' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.143-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_105' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.138-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_104' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.133-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_103' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.129-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_102' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.123-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_101' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.119-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_100' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.113-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_99' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.109-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_98' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.104-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_97' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.100-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inv_keys_V_96' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.096-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'keyT_V' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.092-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'cipherT_V' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.087-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'flag' is power-on initialization." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:41.079-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] In file included from kern_dec.cpp:1:&#xA;In file included from kern_dec.cpp:3:&#xA;In file included from ./kern_dec.hpp:6:&#xA;./galapagos_packet.h:74:23: warning: alias declarations are a C++11 extension [-Wc++11-extensions]&#xA;    using interface = hls::stream&lt;galapagos::stream_packet&lt;T> >;&#xA;                      ^&#xA;1 warning generated." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:32:21.189-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-484] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:31:59.630-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-483] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release. Use 'config_export -vivado_optimization_level' as its replacement." projectName="dec_prj" solutionName="solution1" date="2021-11-26T17:31:59.617-0500" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

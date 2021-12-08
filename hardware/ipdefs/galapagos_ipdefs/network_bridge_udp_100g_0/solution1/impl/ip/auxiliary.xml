@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="network_bridge_udp_100g" xd:componentRef="network_bridge_udp_100g" xd:initiationInterval="4" xd:clockPeriod="3.103" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="rxGalapagosBridge.data" xd:originalName="rxGalapagosBridge" xd:direction="in" xd:interfaceRef="rxGalapagosBridge" xd:busTypeRef="axis" xd:dataWidth="512"/>
+  <xd:arg xd:name="rxGalapagosBridge.keep" xd:originalName="rxGalapagosBridge" xd:direction="in" xd:interfaceRef="rxGalapagosBridge" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="rxGalapagosBridge.last" xd:originalName="rxGalapagosBridge" xd:direction="in" xd:interfaceRef="rxGalapagosBridge" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="lbRxDataIn.data" xd:originalName="lbRxDataIn" xd:direction="in" xd:interfaceRef="lbRxDataIn" xd:busTypeRef="axis" xd:dataWidth="512"/>
+  <xd:arg xd:name="lbRxDataIn.keep" xd:originalName="lbRxDataIn" xd:direction="in" xd:interfaceRef="lbRxDataIn" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="lbRxDataIn.last" xd:originalName="lbRxDataIn" xd:direction="in" xd:interfaceRef="lbRxDataIn" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="lbTxDataOut.data" xd:originalName="lbTxDataOut" xd:direction="out" xd:interfaceRef="lbTxDataOut" xd:busTypeRef="axis" xd:dataWidth="512"/>
+  <xd:arg xd:name="lbTxDataOut.keep" xd:originalName="lbTxDataOut" xd:direction="out" xd:interfaceRef="lbTxDataOut" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="lbTxDataOut.last" xd:originalName="lbTxDataOut" xd:direction="out" xd:interfaceRef="lbTxDataOut" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="txGalapagosBridge.data" xd:originalName="txGalapagosBridge" xd:direction="out" xd:interfaceRef="txGalapagosBridge" xd:busTypeRef="axis" xd:dataWidth="512"/>
+  <xd:arg xd:name="txGalapagosBridge.keep" xd:originalName="txGalapagosBridge" xd:direction="out" xd:interfaceRef="txGalapagosBridge" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="txGalapagosBridge.last" xd:originalName="txGalapagosBridge" xd:direction="out" xd:interfaceRef="txGalapagosBridge" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="*(remote_ip_tx)" xd:originalName="remote_ip_tx" xd:direction="out" xd:interfaceRef="remote_ip_tx_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="32" xd:firstOut="1"/>
+  <xd:arg xd:name="ip_table[]" xd:originalName="ip_table" xd:direction="in" xd:interfaceRef="ip_table_V_PORTA" xd:busTypeRef="bram" xd:firstOut="1" xd:arraySize="256" xd:dataWidth="32"/>
+  <xd:arg xd:name="ip_table[]" xd:originalName="ip_table" xd:direction="in" xd:interfaceRef="ip_table_V_PORTB" xd:busTypeRef="bram" xd:firstOut="1" xd:arraySize="256" xd:dataWidth="32"/>
+  <xd:arg xd:name="tx_state_V" xd:originalName="tx_state_V" xd:direction="out" xd:interfaceRef="tx_state_V" xd:busTypeRef="register" xd:handshakeRef="ap_vld" xd:dataWidth="4" xd:firstOut="0"/>
+  <xd:arg xd:name="arp_status_V" xd:originalName="arp_status_V" xd:direction="in" xd:interfaceRef="arp_status_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="2" xd:firstOut="0"/>
+  <xd:arg xd:name="id_V" xd:originalName="id_V" xd:direction="out" xd:interfaceRef="id_V" xd:busTypeRef="register" xd:handshakeRef="ap_vld" xd:dataWidth="8" xd:firstOut="0"/>
+  <xd:arg xd:name="dest_V" xd:originalName="dest_V" xd:direction="out" xd:interfaceRef="dest_V" xd:busTypeRef="register" xd:handshakeRef="ap_vld" xd:dataWidth="8" xd:firstOut="0"/>
+  <xd:arg xd:name="size_V" xd:originalName="size_V" xd:direction="out" xd:interfaceRef="size_V" xd:busTypeRef="register" xd:handshakeRef="ap_vld" xd:dataWidth="16" xd:firstOut="0"/>
+  <xd:latencyEstimates xd:best-case="3" xd:worst-case="3" xd:average-case="3"/>
+  <xd:resourceEstimates xd:LUT="627" xd:FF="3860" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>

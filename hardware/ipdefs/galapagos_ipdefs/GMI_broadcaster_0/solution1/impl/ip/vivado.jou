@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Aug 14 01:57:03 2021
+# Process ID: 29936
+# Current directory: /home/gaoyu/ECE2500Y/GMI_HLS/GMI_broadcaster/solution1/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /home/gaoyu/ECE2500Y/GMI_HLS/GMI_broadcaster/solution1/impl/ip/vivado.log
+# Journal file: /home/gaoyu/ECE2500Y/GMI_HLS/GMI_broadcaster/solution1/impl/ip/vivado.jou
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace

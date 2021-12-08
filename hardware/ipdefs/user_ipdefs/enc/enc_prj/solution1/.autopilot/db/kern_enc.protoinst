@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"kern_enc": {
+			"proto_instances": {
+			}
+		}
+	}
+}

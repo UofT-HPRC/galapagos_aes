@@ -1,0 +1,109 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'kern_dec'" level="0">
+<item name = "Date">Fri Nov 26 17:32:37 2021
+</item>
+<item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
+<item name = "Project">dec_prj</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu19eg-ffvc1760-2-i</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 7.316, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">1, 21, 1, 21, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_mul_bytes_fu_2165">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2172">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2179">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2186">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2193">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2200">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2207">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2214">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2221">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2228">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2235">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2242">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2249">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2256">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2263">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2270">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2277">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2284">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2291">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2298">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2305">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2312">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2319">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2326">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2333">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2340">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2347">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2354">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2361">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2368">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2375">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2382">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2389">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2396">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2403">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2410">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2417">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2424">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2431">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2438">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2445">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2452">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2459">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2466">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2473">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2480">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2487">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2494">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2501">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2508">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2515">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2522">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2529">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2536">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2543">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2550">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2557">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2564">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2571">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2578">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2585">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2592">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2599">mul_bytes, 0, 0, 0, 0, none</column>
+<column name="grp_mul_bytes_fu_2606">mul_bytes, 0, 0, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

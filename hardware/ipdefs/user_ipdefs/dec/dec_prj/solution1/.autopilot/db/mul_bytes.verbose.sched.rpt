@@ -1,0 +1,159 @@
+
+
+================================================================
+== Vivado HLS Report for 'mul_bytes'
+================================================================
+* Date:           Fri Nov 26 17:32:30 2021
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        dec_prj
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu19eg-ffvc1760-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     1.572|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    0|    0|    0|    0|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 0
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.57>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%b_V_read = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %b_V)" [kern_dec.cpp:19]   --->   Operation 2 'read' 'b_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%a_V_read = call i5 @_ssdm_op_Read.ap_auto.i5(i5 %a_V)" [kern_dec.cpp:19]   --->   Operation 3 'read' 'a_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns) (grouped into LUT with out node xor_ln19)   --->   "%trunc_ln19 = trunc i8 %b_V_read to i1" [kern_dec.cpp:19]   --->   Operation 4 'trunc' 'trunc_ln19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%trunc_ln19_1 = trunc i5 %a_V_read to i4" [kern_dec.cpp:19]   --->   Operation 5 'trunc' 'trunc_ln19_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns) (grouped into LUT with out node xor_ln19)   --->   "%select_ln19 = select i1 %trunc_ln19, i4 %trunc_ln19_1, i4 0" [kern_dec.cpp:19]   --->   Operation 6 'select' 'select_ln19' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 7 [1/1] (0.00ns) (grouped into LUT with out node xor_ln19)   --->   "%zext_ln19 = zext i4 %select_ln19 to i5" [kern_dec.cpp:19]   --->   Operation 7 'zext' 'zext_ln19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns) (grouped into LUT with out node xor_ln19)   --->   "%shl_ln841 = shl i5 %a_V_read, 1" [kern_dec.cpp:24]   --->   Operation 8 'shl' 'shl_ln841' <Predicate = (tmp)> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns) (grouped into LUT with out node xor_ln19)   --->   "%tmp = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %b_V_read, i32 1)" [kern_dec.cpp:19]   --->   Operation 9 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns) (grouped into LUT with out node xor_ln19)   --->   "%select_ln19_1 = select i1 %tmp, i5 %shl_ln841, i5 0" [kern_dec.cpp:19]   --->   Operation 10 'select' 'select_ln19_1' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 11 [1/1] (0.00ns) (grouped into LUT with out node xor_ln19_2)   --->   "%shl_ln841_1 = call i6 @_ssdm_op_BitConcatenate.i6.i4.i2(i4 %trunc_ln19_1, i2 0)" [kern_dec.cpp:24]   --->   Operation 11 'bitconcatenate' 'shl_ln841_1' <Predicate = (tmp_1)> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns) (grouped into LUT with out node xor_ln19_2)   --->   "%tmp_1 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %b_V_read, i32 2)" [kern_dec.cpp:19]   --->   Operation 12 'bitselect' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns) (grouped into LUT with out node xor_ln19_2)   --->   "%select_ln19_2 = select i1 %tmp_1, i6 %shl_ln841_1, i6 0" [kern_dec.cpp:19]   --->   Operation 13 'select' 'select_ln19_2' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 14 [1/1] (0.00ns) (grouped into LUT with out node xor_ln19_2)   --->   "%zext_ln19_1 = zext i6 %select_ln19_2 to i7" [kern_dec.cpp:19]   --->   Operation 14 'zext' 'zext_ln19_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns) (grouped into LUT with out node xor_ln19_2)   --->   "%shl_ln841_2 = call i7 @_ssdm_op_BitConcatenate.i7.i4.i3(i4 %trunc_ln19_1, i3 0)" [kern_dec.cpp:24]   --->   Operation 15 'bitconcatenate' 'shl_ln841_2' <Predicate = (tmp_2)> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns) (grouped into LUT with out node xor_ln19_2)   --->   "%tmp_2 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %b_V_read, i32 3)" [kern_dec.cpp:19]   --->   Operation 16 'bitselect' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns) (grouped into LUT with out node xor_ln19_2)   --->   "%select_ln19_3 = select i1 %tmp_2, i7 %shl_ln841_2, i7 0" [kern_dec.cpp:19]   --->   Operation 17 'select' 'select_ln19_3' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 18 [1/1] (0.00ns) (grouped into LUT with out node xor_ln19_6)   --->   "%shl_ln841_3 = call i8 @_ssdm_op_BitConcatenate.i8.i4.i4(i4 %trunc_ln19_1, i4 0)" [kern_dec.cpp:24]   --->   Operation 18 'bitconcatenate' 'shl_ln841_3' <Predicate = (tmp_3)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns) (grouped into LUT with out node xor_ln19_6)   --->   "%tmp_3 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %b_V_read, i32 4)" [kern_dec.cpp:19]   --->   Operation 19 'bitselect' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns) (grouped into LUT with out node xor_ln19_6)   --->   "%select_ln19_4 = select i1 %tmp_3, i8 %shl_ln841_3, i8 0" [kern_dec.cpp:19]   --->   Operation 20 'select' 'select_ln19_4' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%trunc_ln841 = trunc i5 %a_V_read to i3" [kern_dec.cpp:24]   --->   Operation 21 'trunc' 'trunc_ln841' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%shl_ln841_4 = call i8 @_ssdm_op_BitConcatenate.i8.i3.i5(i3 %trunc_ln841, i5 0)" [kern_dec.cpp:24]   --->   Operation 22 'bitconcatenate' 'shl_ln841_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns) (grouped into LUT with out node select_ln25)   --->   "%tmp_4 = call i1 @_ssdm_op_BitSelect.i1.i5.i32(i5 %a_V_read, i32 3)" [kern_dec.cpp:25]   --->   Operation 23 'bitselect' 'tmp_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns) (grouped into LUT with out node select_ln25)   --->   "%or_ln719 = or i8 %shl_ln841_4, 27" [kern_dec.cpp:26]   --->   Operation 24 'or' 'or_ln719' <Predicate = (tmp_4)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.39ns) (out node of the LUT)   --->   "%select_ln25 = select i1 %tmp_4, i8 %or_ln719, i8 %shl_ln841_4" [kern_dec.cpp:25]   --->   Operation 25 'select' 'select_ln25' <Predicate = true> <Delay = 0.39> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 26 [1/1] (0.00ns) (grouped into LUT with out node xor_ln19_6)   --->   "%tmp_5 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %b_V_read, i32 5)" [kern_dec.cpp:19]   --->   Operation 26 'bitselect' 'tmp_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns) (grouped into LUT with out node xor_ln19_6)   --->   "%select_ln19_5 = select i1 %tmp_5, i8 %select_ln25, i8 0" [kern_dec.cpp:19]   --->   Operation 27 'select' 'select_ln19_5' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%shl_ln841_5 = shl i8 %select_ln25, 1" [kern_dec.cpp:24]   --->   Operation 28 'shl' 'shl_ln841_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns) (grouped into LUT with out node select_ln25_1)   --->   "%tmp_6 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %select_ln25, i32 7)" [kern_dec.cpp:25]   --->   Operation 29 'bitselect' 'tmp_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns) (grouped into LUT with out node select_ln25_1)   --->   "%xor_ln719 = xor i8 %shl_ln841_5, 27" [kern_dec.cpp:26]   --->   Operation 30 'xor' 'xor_ln719' <Predicate = (tmp_6)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 31 [1/1] (0.39ns) (out node of the LUT)   --->   "%select_ln25_1 = select i1 %tmp_6, i8 %xor_ln719, i8 %shl_ln841_5" [kern_dec.cpp:25]   --->   Operation 31 'select' 'select_ln25_1' <Predicate = true> <Delay = 0.39> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 32 [1/1] (0.00ns) (grouped into LUT with out node xor_ln19_4)   --->   "%tmp_7 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %b_V_read, i32 6)" [kern_dec.cpp:19]   --->   Operation 32 'bitselect' 'tmp_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns) (grouped into LUT with out node xor_ln19_4)   --->   "%select_ln19_6 = select i1 %tmp_7, i8 %select_ln25_1, i8 0" [kern_dec.cpp:19]   --->   Operation 33 'select' 'select_ln19_6' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%shl_ln841_6 = shl i8 %select_ln25_1, 1" [kern_dec.cpp:24]   --->   Operation 34 'shl' 'shl_ln841_6' <Predicate = (tmp_9)> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns) (grouped into LUT with out node xor_ln19_4)   --->   "%tmp_8 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %select_ln25_1, i32 7)" [kern_dec.cpp:25]   --->   Operation 35 'bitselect' 'tmp_8' <Predicate = (tmp_9)> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns) (grouped into LUT with out node xor_ln19_4)   --->   "%xor_ln719_1 = xor i8 %shl_ln841_6, 27" [kern_dec.cpp:26]   --->   Operation 36 'xor' 'xor_ln719_1' <Predicate = (tmp_8 & tmp_9)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 37 [1/1] (0.00ns) (grouped into LUT with out node xor_ln19_4)   --->   "%select_ln25_2 = select i1 %tmp_8, i8 %xor_ln719_1, i8 %shl_ln841_6" [kern_dec.cpp:25]   --->   Operation 37 'select' 'select_ln25_2' <Predicate = (tmp_9)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 38 [1/1] (0.00ns) (grouped into LUT with out node xor_ln19_4)   --->   "%tmp_9 = call i1 @_ssdm_op_BitSelect.i1.i8.i32(i8 %b_V_read, i32 7)" [kern_dec.cpp:19]   --->   Operation 38 'bitselect' 'tmp_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns) (grouped into LUT with out node xor_ln19_4)   --->   "%select_ln19_7 = select i1 %tmp_9, i8 %select_ln25_2, i8 0" [kern_dec.cpp:19]   --->   Operation 39 'select' 'select_ln19_7' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 40 [1/1] (0.41ns) (out node of the LUT)   --->   "%xor_ln19 = xor i5 %zext_ln19, %select_ln19_1" [kern_dec.cpp:19]   --->   Operation 40 'xor' 'xor_ln19' <Predicate = true> <Delay = 0.41> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 41 [1/1] (0.00ns) (grouped into LUT with out node xor_ln19_2)   --->   "%zext_ln19_2 = zext i5 %xor_ln19 to i7" [kern_dec.cpp:19]   --->   Operation 41 'zext' 'zext_ln19_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns) (grouped into LUT with out node xor_ln19_2)   --->   "%xor_ln19_1 = xor i7 %zext_ln19_1, %select_ln19_3" [kern_dec.cpp:19]   --->   Operation 42 'xor' 'xor_ln19_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 43 [1/1] (0.38ns) (out node of the LUT)   --->   "%xor_ln19_2 = xor i7 %xor_ln19_1, %zext_ln19_2" [kern_dec.cpp:19]   --->   Operation 43 'xor' 'xor_ln19_2' <Predicate = true> <Delay = 0.38> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 44 [1/1] (0.00ns) (grouped into LUT with out node xor_ln19_6)   --->   "%zext_ln19_3 = zext i7 %xor_ln19_2 to i8" [kern_dec.cpp:19]   --->   Operation 44 'zext' 'zext_ln19_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns) (grouped into LUT with out node xor_ln19_6)   --->   "%xor_ln19_3 = xor i8 %select_ln19_4, %select_ln19_5" [kern_dec.cpp:19]   --->   Operation 45 'xor' 'xor_ln19_3' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 46 [1/1] (0.39ns) (out node of the LUT)   --->   "%xor_ln19_4 = xor i8 %select_ln19_6, %select_ln19_7" [kern_dec.cpp:19]   --->   Operation 46 'xor' 'xor_ln19_4' <Predicate = true> <Delay = 0.39> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 47 [1/1] (0.00ns) (grouped into LUT with out node xor_ln19_6)   --->   "%xor_ln19_5 = xor i8 %xor_ln19_4, %xor_ln19_3" [kern_dec.cpp:19]   --->   Operation 47 'xor' 'xor_ln19_5' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 48 [1/1] (0.39ns) (out node of the LUT)   --->   "%xor_ln19_6 = xor i8 %xor_ln19_5, %zext_ln19_3" [kern_dec.cpp:19]   --->   Operation 48 'xor' 'xor_ln19_6' <Predicate = true> <Delay = 0.39> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "ret i8 %xor_ln19_6" [kern_dec.cpp:31]   --->   Operation 49 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.57ns
+The critical path consists of the following:
+	wire read on port 'a_V' (kern_dec.cpp:19) [4]  (0 ns)
+	'select' operation ('select_ln25', kern_dec.cpp:25) [26]  (0.393 ns)
+	'shl' operation ('shl_ln841_5', kern_dec.cpp:24) [29]  (0 ns)
+	'select' operation ('select_ln25_1', kern_dec.cpp:25) [32]  (0.393 ns)
+	'select' operation ('select_ln19_6', kern_dec.cpp:19) [34]  (0 ns)
+	'xor' operation ('xor_ln19_4', kern_dec.cpp:19) [47]  (0.393 ns)
+	'xor' operation ('xor_ln19_5', kern_dec.cpp:19) [48]  (0 ns)
+	'xor' operation ('xor_ln19_6', kern_dec.cpp:19) [49]  (0.393 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

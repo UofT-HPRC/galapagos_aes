@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Port 'kern_enc/id' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="enc_prj" solutionName="solution1" date="2021-11-09T10:23:55.751-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'keyT_V' is power-on initialization." projectName="enc_prj" solutionName="solution1" date="2021-11-09T10:23:55.720-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'plainT_V' is power-on initialization." projectName="enc_prj" solutionName="solution1" date="2021-11-09T10:23:55.619-0500" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'flag' is power-on initialization." projectName="enc_prj" solutionName="solution1" date="2021-11-09T10:23:55.614-0500" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-104] Completely partitioning array 'keys.V'  accessed through non-constant indices on dimension 1 (kern_enc.cpp:259:39), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead." projectName="enc_prj" solutionName="solution1" date="2021-11-09T10:23:52.360-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] In file included from kern_enc.cpp:1:&#xA;In file included from kern_enc.cpp:3:&#xA;In file included from ./kern_enc.hpp:6:&#xA;./galapagos_packet.h:74:23: warning: alias declarations are a C++11 extension [-Wc++11-extensions]&#xA;    using interface = hls::stream&lt;galapagos::stream_packet&lt;T> >;&#xA;                      ^&#xA;1 warning generated." projectName="enc_prj" solutionName="solution1" date="2021-11-09T10:23:49.458-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-484] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release." projectName="enc_prj" solutionName="solution1" date="2021-11-09T10:23:28.191-0500" type="Warning"/>
+        <logs message="WARNING: [HLS 200-483] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release. Use 'config_export -vivado_optimization_level' as its replacement." projectName="enc_prj" solutionName="solution1" date="2021-11-09T10:23:28.176-0500" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

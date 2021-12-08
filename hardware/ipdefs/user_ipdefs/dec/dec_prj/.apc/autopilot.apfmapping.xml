@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="packet_size.h" path="/home/mahdi/finalIPs/finalIPs/dec/packet_size.h"/>
+    <originFiles name="kern_dec.hpp" path="/home/mahdi/finalIPs/finalIPs/dec/kern_dec.hpp"/>
+    <originFiles name="kern_dec.cpp" path="/home/mahdi/finalIPs/finalIPs/dec/kern_dec.cpp"/>
+    <originFiles name="galapagos_packet.h" path="/home/mahdi/finalIPs/finalIPs/dec/galapagos_packet.h"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,806 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-40] Cannot find library '/opt/mnt/Xilinx/Vivado/2019.1/common/technology/xilinx/Virtex-7/Virtex-7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/Virtex-7/Virtex-7'.
+INFO: [HLS 200-10] Setting target device to 'xc7vx485t-ffg1157-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'kern_enc.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from kern_enc.cpp:1:
+In file included from kern_enc.cpp:3:
+In file included from ./kern_enc.hpp:6:
+./galapagos_packet.h:74:23: warning: alias declarations are a C++11 extension [-Wc++11-extensions]
+    using interface = hls::stream<galapagos::stream_packet<T> >;
+                      ^
+In file included from kern_enc.cpp:1:
+kern_enc.cpp:46:12: error: member reference type 'galapagos_interface *' (aka 'stream<galapagos_packet> *') is a pointer; maybe you meant to use '->'?
+    if (!in.empty() && !out.full()) {
+         ~~^
+           ->
+kern_enc.cpp:46:28: error: member reference type 'galapagos_interface *' (aka 'stream<galapagos_packet> *') is a pointer; maybe you meant to use '->'?
+    if (!in.empty() && !out.full()) {
+                        ~~~^
+                           ->
+kern_enc.cpp:63:12: error: use of undeclared identifier 'size_t'; did you mean 'sizeof'?
+           size_t size;
+           ^~~~~~
+           sizeof
+kern_enc.cpp:63:19: error: use of undeclared identifier 'size'
+           size_t size;
+                  ^
+kern_enc.cpp:290:2: error: use of undeclared identifier 'printf'
+ printf ("\nEND OF ECRYPTION !!!!!!!!!!!!\n");
+ ^
+1 warning and 5 errors generated.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+WARNING: [HLS 200-40] Cannot find library '/opt/mnt/Xilinx/Vivado/2019.1/common/technology/xilinx/Virtex-7/Virtex-7.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/Virtex-7/Virtex-7'.
+INFO: [HLS 200-10] Setting target device to 'xc7vx485t-ffg1157-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'kern_enc.cpp' ... 
+WARNING: [HLS 200-40] In file included from kern_enc.cpp:1:
+In file included from kern_enc.cpp:3:
+In file included from ./kern_enc.hpp:6:
+./galapagos_packet.h:74:23: warning: alias declarations are a C++11 extension [-Wc++11-extensions]
+    using interface = hls::stream<galapagos::stream_packet<T> >;
+                      ^
+1 warning generated.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 893.758 ; gain = 192.000 ; free physical = 32027 ; free virtual = 111524
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 893.758 ; gain = 192.000 ; free physical = 32027 ; free virtual = 111524
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 893.758 ; gain = 192.000 ; free physical = 32015 ; free virtual = 111515
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 893.758 ; gain = 192.000 ; free physical = 32013 ; free virtual = 111513
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Lp6' (kern_enc.cpp:162) in function 'kern_enc' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Lp2' (kern_enc.cpp:74) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp3' (kern_enc.cpp:80) in function 'kern_enc' completely with a factor of 10.
+INFO: [HLS 200-489] Unrolling loop 'Lp4' (kern_enc.cpp:98) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp1' (kern_enc.cpp:147) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp5' (kern_enc.cpp:155) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp7' (kern_enc.cpp:167) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp8' (kern_enc.cpp:195) in function 'kern_enc' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Lp9' (kern_enc.cpp:201) in function 'kern_enc' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Lp10' (kern_enc.cpp:224) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp11' (kern_enc.cpp:233) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp12' (kern_enc.cpp:260) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp13' (kern_enc.cpp:268) in function 'kern_enc' completely with a factor of 15.
+INFO: [XFORM 203-102] Partitioning array 'temp_column.V' (kern_enc.cpp:25) automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp_column_a.V' (kern_enc.cpp:25) automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp_column_b.V' (kern_enc.cpp:25) automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp_state.V' (kern_enc.cpp:26) automatically.
+INFO: [XFORM 203-102] Partitioning array 'cipher.V' (kern_enc.cpp:27) automatically.
+INFO: [XFORM 203-102] Partitioning array 'lastround.V' (kern_enc.cpp:29) automatically.
+INFO: [XFORM 203-102] Partitioning array 'plain_block.V' (kern_enc.cpp:35) automatically.
+WARNING: [XFORM 203-104] Completely partitioning array 'keys.V'  accessed through non-constant indices on dimension 1 (kern_enc.cpp:225:39), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+INFO: [XFORM 203-101] Partitioning array 'keys.V'  in dimension 1 completely.
+INFO: [XFORM 203-11] Balancing expressions in function 'kern_enc' (kern_enc.cpp:7)...80 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 894.078 ; gain = 192.320 ; free physical = 31977 ; free virtual = 111479
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 894.078 ; gain = 192.320 ; free physical = 31974 ; free virtual = 111475
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'kern_enc' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kern_enc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Lp6'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 24.83 seconds; current allocated memory: 139.872 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.75 seconds; current allocated memory: 143.140 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kern_enc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/id' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_data_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_dest_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_last_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_id_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_user_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_keep_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_data_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_dest_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_last_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_id_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_user_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_keep_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'kern_enc' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'flag' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'plainT_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'keyT_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Port 'kern_enc/id' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Generating core module 'kern_enc_mux_164_8_1_1': 15 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kern_enc'.
+INFO: [HLS 200-111]  Elapsed time: 0.94 seconds; current allocated memory: 148.664 MB.
+INFO: [RTMG 210-279] Implementing memory 'kern_enc_SBOX_V_rom' using block ROMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 894.078 ; gain = 192.320 ; free physical = 31938 ; free virtual = 111452
+INFO: [VHDL 208-304] Generating VHDL RTL for kern_enc.
+INFO: [VLOG 209-307] Generating Verilog RTL for kern_enc.
+INFO: [HLS 200-112]==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvc1760-2-i'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+WARNING: [HLS 200-483] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release. Use 'config_export -vivado_optimization_level' as its replacement.
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-484] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'kern_enc.cpp' ... 
+WARNING: [HLS 200-40] In file included from kern_enc.cpp:1:
+In file included from kern_enc.cpp:3:
+In file included from ./kern_enc.hpp:6:
+./galapagos_packet.h:74:23: warning: alias declarations are a C++11 extension [-Wc++11-extensions]
+    using interface = hls::stream<galapagos::stream_packet<T> >;
+                      ^
+1 warning generated.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 909.590 ; gain = 207.832 ; free physical = 27588 ; free virtual = 111245
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 909.590 ; gain = 207.832 ; free physical = 27588 ; free virtual = 111245
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 909.590 ; gain = 207.832 ; free physical = 27574 ; free virtual = 111232
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 909.590 ; gain = 207.832 ; free physical = 27569 ; free virtual = 111228
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Lp6' (kern_enc.cpp:162) in function 'kern_enc' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Lp2' (kern_enc.cpp:74) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp3' (kern_enc.cpp:80) in function 'kern_enc' completely with a factor of 10.
+INFO: [HLS 200-489] Unrolling loop 'Lp4' (kern_enc.cpp:98) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp1' (kern_enc.cpp:147) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp5' (kern_enc.cpp:155) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp7' (kern_enc.cpp:167) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp8' (kern_enc.cpp:195) in function 'kern_enc' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Lp9' (kern_enc.cpp:201) in function 'kern_enc' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Lp10' (kern_enc.cpp:224) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp11' (kern_enc.cpp:233) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp12' (kern_enc.cpp:260) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp13' (kern_enc.cpp:268) in function 'kern_enc' completely with a factor of 15.
+INFO: [XFORM 203-102] Partitioning array 'temp_column.V' (kern_enc.cpp:25) automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp_column_a.V' (kern_enc.cpp:25) automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp_column_b.V' (kern_enc.cpp:25) automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp_state.V' (kern_enc.cpp:26) automatically.
+INFO: [XFORM 203-102] Partitioning array 'cipher.V' (kern_enc.cpp:27) automatically.
+INFO: [XFORM 203-102] Partitioning array 'lastround.V' (kern_enc.cpp:29) automatically.
+INFO: [XFORM 203-102] Partitioning array 'plain_block.V' (kern_enc.cpp:35) automatically.
+WARNING: [XFORM 203-104] Completely partitioning array 'keys.V'  accessed through non-constant indices on dimension 1 (kern_enc.cpp:225:39), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+INFO: [XFORM 203-101] Partitioning array 'keys.V'  in dimension 1 completely.
+INFO: [XFORM 203-11] Balancing expressions in function 'kern_enc' (kern_enc.cpp:7)...80 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 909.590 ; gain = 207.832 ; free physical = 27535 ; free virtual = 111195
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 909.590 ; gain = 207.832 ; free physical = 27532 ; free virtual = 111192
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'kern_enc' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kern_enc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Lp6'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 24.1 seconds; current allocated memory: 141.254 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.73 seconds; current allocated memory: 144.501 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kern_enc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/id' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_data_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_dest_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_last_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_id_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_user_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_keep_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_data_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_dest_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_last_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_id_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_user_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_keep_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'kern_enc' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'flag' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'plainT_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'keyT_V' is power-on initialization.
+WARNING==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvc1760-2-i'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-483] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release. Use 'config_export -vivado_optimization_level' as its replacement.
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-484] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'kern_enc.cpp' ... 
+WARNING: [HLS 200-40] In file included from kern_enc.cpp:1:
+In file included from kern_enc.cpp:3:
+In file included from ./kern_enc.hpp:6:
+./galapagos_packet.h:74:23: warning: alias declarations are a C++11 extension [-Wc++11-extensions]
+    using interface = hls::stream<galapagos::stream_packet<T> >;
+                      ^
+1 warning generated.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:18 ; elapsed = 00:00:29 . Memory (MB): peak = 916.309 ; gain = 208.078 ; free physical = 45252 ; free virtual = 55204
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:18 ; elapsed = 00:00:29 . Memory (MB): peak = 916.309 ; gain = 208.078 ; free physical = 45252 ; free virtual = 55204
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:19 ; elapsed = 00:00:32 . Memory (MB): peak = 916.309 ; gain = 208.078 ; free physical = 45236 ; free virtual = 55189
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:19 ; elapsed = 00:00:32 . Memory (MB): peak = 916.309 ; gain = 208.078 ; free physical = 45232 ; free virtual = 55185
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Lp6' (kern_enc.cpp:162) in function 'kern_enc' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Lp2' (kern_enc.cpp:74) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp3' (kern_enc.cpp:80) in function 'kern_enc' completely with a factor of 10.
+INFO: [HLS 200-489] Unrolling loop 'Lp4' (kern_enc.cpp:98) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp1' (kern_enc.cpp:147) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp5' (kern_enc.cpp:155) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp7' (kern_enc.cpp:167) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp8' (kern_enc.cpp:195) in function 'kern_enc' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Lp9' (kern_enc.cpp:201) in function 'kern_enc' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Lp10' (kern_enc.cpp:224) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp11' (kern_enc.cpp:233) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp12' (kern_enc.cpp:260) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp13' (kern_enc.cpp:268) in function 'kern_enc' completely with a factor of 15.
+INFO: [XFORM 203-102] Partitioning array 'temp_column.V' (kern_enc.cpp:25) automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp_column_a.V' (kern_enc.cpp:25) automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp_column_b.V' (kern_enc.cpp:25) automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp_state.V' (kern_enc.cpp:26) automatically.
+INFO: [XFORM 203-102] Partitioning array 'cipher.V' (kern_enc.cpp:27) automatically.
+INFO: [XFORM 203-102] Partitioning array 'lastround.V' (kern_enc.cpp:29) automatically.
+INFO: [XFORM 203-102] Partitioning array 'plain_block.V' (kern_enc.cpp:35) automatically.
+WARNING: [XFORM 203-104] Completely partitioning array 'keys.V'  accessed through non-constant indices on dimension 1 (kern_enc.cpp:225:39), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+INFO: [XFORM 203-101] Partitioning array 'keys.V'  in dimension 1 completely.
+INFO: [XFORM 203-11] Balancing expressions in function 'kern_enc' (kern_enc.cpp:7)...80 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:21 ; elapsed = 00:00:33 . Memory (MB): peak = 916.629 ; gain = 208.398 ; free physical = 45196 ; free virtual = 55151
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:22 ; elapsed = 00:00:34 . Memory (MB): peak = 916.629 ; gain = 208.398 ; free physical = 45192 ; free virtual = 55147
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'kern_enc' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kern_enc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Lp6'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 34.4 seconds; current allocated memory: 141.648 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.66 seconds; current allocated memory: 144.869 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kern_enc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/id' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_data_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_dest_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_last_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_id_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_user_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_keep_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_data_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_dest_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_last_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_id_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_user_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_keep_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'kern_enc' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'flag' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'plainT_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'keyT_V' is power-on initialization.
+WARNING: ==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvc1760-2-i'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-483] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release. Use 'config_export -vivado_optimization_level' as its replacement.
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-484] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'kern_enc.cpp' ... 
+WARNING: [HLS 200-40] In file included from kern_enc.cpp:1:
+In file included from kern_enc.cpp:3:
+In file included from ./kern_enc.hpp:6:
+./galapagos_packet.h:74:23: warning: alias declarations are a C++11 extension [-Wc++11-extensions]
+    using interface = hls::stream<galapagos::stream_packet<T> >;
+                      ^
+1 warning generated.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 916.309 ; gain = 208.078 ; free physical = 8749 ; free virtual = 59888
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 916.309 ; gain = 208.078 ; free physical = 8749 ; free virtual = 59888
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:19 ; elapsed = 00:00:28 . Memory (MB): peak = 916.309 ; gain = 208.078 ; free physical = 8732 ; free virtual = 59872
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:19 ; elapsed = 00:00:29 . Memory (MB): peak = 916.309 ; gain = 208.078 ; free physical = 8727 ; free virtual = 59868
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Lp6' (kern_enc.cpp:164) in function 'kern_enc' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Lp2' (kern_enc.cpp:76) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp3' (kern_enc.cpp:82) in function 'kern_enc' completely with a factor of 10.
+INFO: [HLS 200-489] Unrolling loop 'Lp4' (kern_enc.cpp:100) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp1' (kern_enc.cpp:149) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp5' (kern_enc.cpp:157) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp7' (kern_enc.cpp:169) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp8' (kern_enc.cpp:197) in function 'kern_enc' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Lp9' (kern_enc.cpp:203) in function 'kern_enc' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Lp10' (kern_enc.cpp:226) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp11' (kern_enc.cpp:235) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp12' (kern_enc.cpp:262) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp13' (kern_enc.cpp:270) in function 'kern_enc' completely with a factor of 15.
+INFO: [XFORM 203-102] Partitioning array 'temp_column.V' (kern_enc.cpp:25) automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp_column_a.V' (kern_enc.cpp:25) automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp_column_b.V' (kern_enc.cpp:25) automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp_state.V' (kern_enc.cpp:26) automatically.
+INFO: [XFORM 203-102] Partitioning array 'cipher.V' (kern_enc.cpp:27) automatically.
+INFO: [XFORM 203-102] Partitioning array 'lastround.V' (kern_enc.cpp:29) automatically.
+INFO: [XFORM 203-102] Partitioning array 'plain_block.V' (kern_enc.cpp:35) automatically.
+WARNING: [XFORM 203-104] Completely partitioning array 'keys.V'  accessed through non-constant indices on dimension 1 (kern_enc.cpp:227:39), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+INFO: [XFORM 203-101] Partitioning array 'keys.V'  in dimension 1 completely.
+INFO: [XFORM 203-11] Balancing expressions in function 'kern_enc' (kern_enc.cpp:7)...80 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:21 ; elapsed = 00:00:30 . Memory (MB): peak = 916.629 ; gain = 208.398 ; free physical = 8693 ; free virtual = 59836
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:21 ; elapsed = 00:00:31 . Memory (MB): peak = 916.629 ; gain = 208.398 ; free physical = 8690 ; free virtual = 59833
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'kern_enc' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kern_enc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Lp6'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 31.19 seconds; current allocated memory: 141.578 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.67 seconds; current allocated memory: 144.802 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kern_enc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/id' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_data_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_dest_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_last_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_id_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_user_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_keep_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'kern_enc' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'flag' is power-on initialization.
+WARNING: [RTGEN 206-101]==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvc1760-2-i'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-483] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release. Use 'config_export -vivado_optimization_level' as its replacement.
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-484] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'kern_enc.cpp' ... 
+WARNING: [HLS 200-40] In file included from kern_enc.cpp:1:
+In file included from kern_enc.cpp:3:
+In file included from ./kern_enc.hpp:6:
+./galapagos_packet.h:74:23: warning: alias declarations are a C++11 extension [-Wc++11-extensions]
+    using interface = hls::stream<galapagos::stream_packet<T> >;
+                      ^
+1 warning generated.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 916.309 ; gain = 208.078 ; free physical = 6094 ; free virtual = 57517
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 916.309 ; gain = 208.078 ; free physical = 6094 ; free virtual = 57517
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:20 ; elapsed = 00:00:29 . Memory (MB): peak = 916.309 ; gain = 208.078 ; free physical = 6078 ; free virtual = 57502
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:20 ; elapsed = 00:00:29 . Memory (MB): peak = 916.309 ; gain = 208.078 ; free physical = 6074 ; free virtual = 57499
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Lp6' (kern_enc.cpp:196) in function 'kern_enc' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Lp2' (kern_enc.cpp:108) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp3' (kern_enc.cpp:114) in function 'kern_enc' completely with a factor of 10.
+INFO: [HLS 200-489] Unrolling loop 'Lp4' (kern_enc.cpp:132) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp1' (kern_enc.cpp:181) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp5' (kern_enc.cpp:189) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp7' (kern_enc.cpp:201) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp8' (kern_enc.cpp:229) in function 'kern_enc' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Lp9' (kern_enc.cpp:235) in function 'kern_enc' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Lp10' (kern_enc.cpp:258) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp11' (kern_enc.cpp:267) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp12' (kern_enc.cpp:294) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp13' (kern_enc.cpp:302) in function 'kern_enc' completely with a factor of 15.
+INFO: [XFORM 203-102] Partitioning array 'temp_column.V' (kern_enc.cpp:25) automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp_column_a.V' (kern_enc.cpp:25) automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp_column_b.V' (kern_enc.cpp:25) automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp_state.V' (kern_enc.cpp:26) automatically.
+INFO: [XFORM 203-102] Partitioning array 'cipher.V' (kern_enc.cpp:27) automatically.
+INFO: [XFORM 203-102] Partitioning array 'lastround.V' (kern_enc.cpp:29) automatically.
+INFO: [XFORM 203-102] Partitioning array 'plain_block.V' (kern_enc.cpp:35) automatically.
+WARNING: [XFORM 203-104] Completely partitioning array 'keys.V'  accessed through non-constant indices on dimension 1 (kern_enc.cpp:259:39), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+INFO: [XFORM 203-101] Partitioning array 'keys.V'  in dimension 1 completely.
+INFO: [XFORM 203-11] Balancing expressions in function 'kern_enc' (kern_enc.cpp:7)...80 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:21 ; elapsed = 00:00:31 . Memory (MB): peak = 916.309 ; gain = 208.078 ; free physical = 6039 ; free virtual = 57465
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:22 ; elapsed = 00:00:31 . Memory (MB): peak = 916.309 ; gain = 208.078 ; free physical = 6036 ; free virtual = 57462
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'kern_enc' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kern_enc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Lp6'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 31.88 seconds; current allocated memory: 141.977 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.7 seconds; current allocated memory: 145.333 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kern_enc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/id' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_data_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_dest_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_last_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_id_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_user_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_keep_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'kern_enc' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'flag' is power-on initialization.
+WARNING: [RTGEN 206-101]==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvc1760-2-i'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-483] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release. Use 'config_export -vivado_optimization_level' as its replacement.
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-484] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'kern_enc.cpp' ... 
+WARNING: [HLS 200-40] In file included from kern_enc.cpp:1:
+In file included from kern_enc.cpp:3:
+In file included from ./kern_enc.hpp:6:
+./galapagos_packet.h:74:23: warning: alias declarations are a C++11 extension [-Wc++11-extensions]
+    using interface = hls::stream<galapagos::stream_packet<T> >;
+                      ^
+1 warning generated.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:18 ; elapsed = 00:00:30 . Memory (MB): peak = 916.309 ; gain = 208.078 ; free physical = 5703 ; free virtual = 57147
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:18 ; elapsed = 00:00:30 . Memory (MB): peak = 916.309 ; gain = 208.078 ; free physical = 5703 ; free virtual = 57147
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:20 ; elapsed = 00:00:32 . Memory (MB): peak = 916.309 ; gain = 208.078 ; free physical = 5686 ; free virtual = 57131
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:20 ; elapsed = 00:00:32 . Memory (MB): peak = 916.309 ; gain = 208.078 ; free physical = 5682 ; free virtual = 57128
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Lp6' (kern_enc.cpp:196) in function 'kern_enc' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Lp2' (kern_enc.cpp:108) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp3' (kern_enc.cpp:114) in function 'kern_enc' completely with a factor of 10.
+INFO: [HLS 200-489] Unrolling loop 'Lp4' (kern_enc.cpp:132) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp1' (kern_enc.cpp:181) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp5' (kern_enc.cpp:189) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp7' (kern_enc.cpp:201) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp8' (kern_enc.cpp:229) in function 'kern_enc' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Lp9' (kern_enc.cpp:235) in function 'kern_enc' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Lp10' (kern_enc.cpp:258) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp11' (kern_enc.cpp:267) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp12' (kern_enc.cpp:294) in function 'kern_enc' completely with a factor of 16.
+INFO: [XFORM 203-102] Partitioning array 'temp_column.V' (kern_enc.cpp:25) automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp_column_a.V' (kern_enc.cpp:25) automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp_column_b.V' (kern_enc.cpp:25) automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp_state.V' (kern_enc.cpp:26) automatically.
+INFO: [XFORM 203-102] Partitioning array 'cipher.V' (kern_enc.cpp:27) automatically.
+INFO: [XFORM 203-102] Partitioning array 'lastround.V' (kern_enc.cpp:29) automatically.
+INFO: [XFORM 203-102] Partitioning array 'plain_block.V' (kern_enc.cpp:35) automatically.
+WARNING: [XFORM 203-104] Completely partitioning array 'keys.V'  accessed through non-constant indices on dimension 1 (kern_enc.cpp:259:39), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+INFO: [XFORM 203-101] Partitioning array 'keys.V'  in dimension 1 completely.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:21 ; elapsed = 00:00:33 . Memory (MB): peak = 916.613 ; gain = 208.383 ; free physical = 5649 ; free virtual = 57096
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:21 ; elapsed = 00:00:33 . Memory (MB): peak = 916.613 ; gain = 208.383 ; free physical = 5645 ; free virtual = 57092
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'kern_enc' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kern_enc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 33.47 seconds; current allocated memory: 133.484 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 133.762 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kern_enc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/id' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_data_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_dest_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_last_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_id_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_user_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_keep_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'kern_enc' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'flag' is power-on initialization.
+WARNING: [RTGEN 206-101] Port 'kern_enc/id' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kern_enc'.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 134.641 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:22 ; elapsed = 00:00:35 . Memory (MB): peak = 916.613 ; gain = 208.383 ; free physical = 5641 ; free virtual = 57088
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvc1760-2-i'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-483] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release. Use 'config_export -vivado_optimization_level' as its replacement.
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-484] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'kern_enc.cpp' ... 
+WARNING: [HLS 200-40] In file included from kern_enc.cpp:1:
+In file included from kern_enc.cpp:3:
+In file included from ./kern_enc.hpp:6:
+./galapagos_packet.h:74:23: warning: alias declarations are a C++11 extension [-Wc++11-extensions]
+    using interface = hls::stream<galapagos::stream_packet<T> >;
+                      ^
+1 warning generated.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:18 ; elapsed = 00:00:29 . Memory (MB): peak = 916.309 ; gain = 208.078 ; free physical = 5713 ; free virtual = 56887
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:18 ; elapsed = 00:00:29 . Memory (MB): peak = 916.309 ; gain = 208.078 ; free physical = 5713 ; free virtual = 56887
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:19 ; elapsed = 00:00:31 . Memory (MB): peak = 916.309 ; gain = 208.078 ; free physical = 5696 ; free virtual = 56871
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:20 ; elapsed = 00:00:31 . Memory (MB): peak = 916.309 ; gain = 208.078 ; free physical = 5692 ; free virtual = 56867
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Lp6' (kern_enc.cpp:196) in function 'kern_enc' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Lp2' (kern_enc.cpp:108) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp3' (kern_enc.cpp:114) in function 'kern_enc' completely with a factor of 10.
+INFO: [HLS 200-489] Unrolling loop 'Lp4' (kern_enc.cpp:132) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp1' (kern_enc.cpp:181) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp5' (kern_enc.cpp:189) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp7' (kern_enc.cpp:201) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp8' (kern_enc.cpp:229) in function 'kern_enc' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Lp9' (kern_enc.cpp:235) in function 'kern_enc' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Lp10' (kern_enc.cpp:258) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp11' (kern_enc.cpp:267) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp12' (kern_enc.cpp:294) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp13' (kern_enc.cpp:302) in function 'kern_enc' completely with a factor of 15.
+INFO: [XFORM 203-102] Partitioning array 'temp_column.V' (kern_enc.cpp:25) automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp_column_a.V' (kern_enc.cpp:25) automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp_column_b.V' (kern_enc.cpp:25) automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp_state.V' (kern_enc.cpp:26) automatically.
+INFO: [XFORM 203-102] Partitioning array 'cipher.V' (kern_enc.cpp:27) automatically.
+INFO: [XFORM 203-102] Partitioning array 'lastround.V' (kern_enc.cpp:29) automatically.
+INFO: [XFORM 203-102] Partitioning array 'plain_block.V' (kern_enc.cpp:35) automatically.
+WARNING: [XFORM 203-104] Completely partitioning array 'keys.V'  accessed through non-constant indices on dimension 1 (kern_enc.cpp:259:39), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+INFO: [XFORM 203-101] Partitioning array 'keys.V'  in dimension 1 completely.
+INFO: [XFORM 203-11] Balancing expressions in function 'kern_enc' (kern_enc.cpp:7)...80 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:21 ; elapsed = 00:00:33 . Memory (MB): peak = 916.309 ; gain = 208.078 ; free physical = 5658 ; free virtual = 56835
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:22 ; elapsed = 00:00:33 . Memory (MB): peak = 916.309 ; gain = 208.078 ; free physical = 5655 ; free virtual = 56832
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'kern_enc' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kern_enc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Lp6'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 33.82 seconds; current allocated memory: 141.973 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.69 seconds; current allocated memory: 145.329 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kern_enc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/id' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_data_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_dest_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_last_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_id_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_user_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_keep_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'kern_enc' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'flag' is power-on initialization.
+WARNING: [RTGEN 206-101]==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1.25ns.
+INFO: [HLS 200-10] Setting target device to 'xczu19eg-ffvc1760-2-i'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-483] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release. Use 'config_export -vivado_optimization_level' as its replacement.
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+WARNING: [HLS 200-484] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'kern_enc.cpp' ... 
+WARNING: [HLS 200-40] In file included from kern_enc.cpp:1:
+In file included from kern_enc.cpp:3:
+In file included from ./kern_enc.hpp:6:
+./galapagos_packet.h:74:23: warning: alias declarations are a C++11 extension [-Wc++11-extensions]
+    using interface = hls::stream<galapagos::stream_packet<T> >;
+                      ^
+1 warning generated.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:18 ; elapsed = 00:00:28 . Memory (MB): peak = 916.309 ; gain = 208.078 ; free physical = 5785 ; free virtual = 55474
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:18 ; elapsed = 00:00:28 . Memory (MB): peak = 916.309 ; gain = 208.078 ; free physical = 5785 ; free virtual = 55474
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 916.309 ; gain = 208.078 ; free physical = 5768 ; free virtual = 55458
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 916.309 ; gain = 208.078 ; free physical = 5764 ; free virtual = 55455
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Lp6' (kern_enc.cpp:196) in function 'kern_enc' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Lp2' (kern_enc.cpp:124) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp3' (kern_enc.cpp:130) in function 'kern_enc' completely with a factor of 10.
+INFO: [HLS 200-489] Unrolling loop 'Lp4' (kern_enc.cpp:148) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp1' (kern_enc.cpp:181) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp5' (kern_enc.cpp:189) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp7' (kern_enc.cpp:201) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp8' (kern_enc.cpp:229) in function 'kern_enc' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Lp9' (kern_enc.cpp:235) in function 'kern_enc' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Lp10' (kern_enc.cpp:258) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp11' (kern_enc.cpp:267) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp12' (kern_enc.cpp:294) in function 'kern_enc' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Lp13' (kern_enc.cpp:302) in function 'kern_enc' completely with a factor of 15.
+INFO: [XFORM 203-102] Partitioning array 'temp_column.V' (kern_enc.cpp:25) automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp_column_a.V' (kern_enc.cpp:25) automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp_column_b.V' (kern_enc.cpp:25) automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp_state.V' (kern_enc.cpp:26) automatically.
+INFO: [XFORM 203-102] Partitioning array 'cipher.V' (kern_enc.cpp:27) automatically.
+INFO: [XFORM 203-102] Partitioning array 'lastround.V' (kern_enc.cpp:29) automatically.
+INFO: [XFORM 203-102] Partitioning array 'plain_block.V' (kern_enc.cpp:35) automatically.
+WARNING: [XFORM 203-104] Completely partitioning array 'keys.V'  accessed through non-constant indices on dimension 1 (kern_enc.cpp:259:39), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+INFO: [XFORM 203-101] Partitioning array 'keys.V'  in dimension 1 completely.
+INFO: [XFORM 203-11] Balancing expressions in function 'kern_enc' (kern_enc.cpp:7)...80 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:21 ; elapsed = 00:00:32 . Memory (MB): peak = 916.629 ; gain = 208.398 ; free physical = 5724 ; free virtual = 55416
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:21 ; elapsed = 00:00:32 . Memory (MB): peak = 916.629 ; gain = 208.398 ; free physical = 5721 ; free virtual = 55413
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'kern_enc' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kern_enc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Lp6'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 32.86 seconds; current allocated memory: 141.639 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.73 seconds; current allocated memory: 144.932 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kern_enc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/id' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_data_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_dest_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_last_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_id_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_user_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/in_V_keep_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'kern_enc/out_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'kern_enc' to 'ap_ctrl_none'.
+WARNING: [RTGEN 206-101] Register 'flag' is power-on initialization.
+WARNING: [RTGEN 206-101]==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
