@@ -13,13 +13,10 @@ void init_kern (
      // initialize the receiver RSA
      ap_uint<32> key_exchange_dest1 = 0x1;
      out->packet_write((char *)&key_exchange_dest1, 1, 2, 0);
-     printf("the second packet sent.\n");
      
      // initialize the sender RSA
      ap_uint<32> key_exchange_dest = 2;
-     printf("the first packet is going to be send.\n");
      out->packet_write((char *)&key_exchange_dest, 1, 1, 0);
-     printf("the first packet sent.\n");
      
      // send the plain text to the aes encryption core
      // IN plainText ("0111111111abcdeffedcfff876443210", 16);
