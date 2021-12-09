@@ -33,4 +33,4 @@ With the help of:
 - [Naif Tarafdar](https://github.com/tarafdar) who developed the Galapagos framework.
 - [Qianfeng (Clark) Shen](https://github.com/QianfengClarkShen) who developed the Gulf-Stream UDP bridge.
 - [Juan Camilo Vega](https://github.com/juancamilovega)
-- [Yu Gao]
+- Yu Gao
