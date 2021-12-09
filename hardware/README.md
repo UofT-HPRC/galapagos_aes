@@ -42,7 +42,7 @@ The ip address that you set here is being used for this FPGA.
 It makes current FPGA accessible by other either FPGAs or CPUs. 
 You can use any MAC address you want, but I suggest modifying only 8 LSB bits.
 
-P.S: Any questions regarding `Gulf-Stream` should be asked from Clark who developed this UDP bridge.
+P.S.: Any questions regarding `Gulf-Stream` should be asked from Clark who developed this UDP bridge.
 This is the main GitHub repo of `Gulf-Stream`: https://github.com/UofT-HPRC/GULF-Stream.git
 
 <img src="https://github.com/UofT-HPRC/galapagos_aes/blob/main/hardware/PNGs/gulf_stream.png" width="600"/>
@@ -131,7 +131,7 @@ Be aware that if you are using other mpsoc you should modify the `208` to the ap
 4- You have to again run the commands in step 1. 
 Then, after Vivado did the refreshing process, you would be able to see ILAs.
 
-P.S: For debugging purposes, we asked Camilo to help us. 
+P.S.: For debugging purposes, we asked Camilo to help us. 
 If you have any questions in this regard, feel free to message him.
 
 # How to Create Your Project
@@ -141,5 +141,6 @@ To add your IP cores to the project, open `pr.bd` again, go inside the `applicat
 You will see that we have two `enc` and `dec` cores over there sandwiched by two input/output FIFOs. 
 You can add your IP cores here as well; just remember to add the FIFOs at the input/output of your cores.
 To be able to see your IP cores, you have to add the IP projects to `ipdefs/user_ipdefs` beforehand.
+Also, it is a good practice to take a look at our enc/dec HLS codes to find out how you could send and receive UDP packets.
 Also, you might need to modify the `input_switch` and `output_switch` based on the number of kernels you have in your project.
 Other than those, you should be okay, and you can do the compiling process again and work on your own project.
