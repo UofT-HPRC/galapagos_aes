@@ -39,7 +39,7 @@ In order to compile and successfully run this project, you have to modify three 
 
 4.1- Double click on `GULF_Stream_0`, and you will see it has four parameters that you should set based on the ip addresses that you use.
 The ip address that you set here is being used for this FPGA. 
-It makes current FPGA accessible by other either FPGAs or CPUs. 
+It makes current FPGA accessible by other either FPGAs or CPUs. Each FPGA is assigned a unique IP address, and all kernels on the FPGA share the same IP. 
 You can use any MAC address you want, but I suggest modifying only 8 LSB bits.
 
 P.S.: Any questions regarding `Gulf-Stream` should be asked from Clark who developed this UDP bridge.
@@ -55,7 +55,7 @@ Other fields should be filled as always.
 
 <img src="https://github.com/UofT-HPRC/galapagos_aes/blob/main/hardware/PNGs/ip_constant_block.png" width="600"/>
 
-4.3- Double click on `blk_mem_gen_0`, go to the other options, and click `Edit` to edit the Coe file.
+4.3- Double click on `blk_mem_gen_0`, go to the other options, and click `Edit` to edit the Coe file. The IP addresses for all kernels are stored in ascending order of kernel ID, separated by 0 0 0. 
 You have to add all the ip addresses you use for Galapagos kernels you have in your project.
 For the purpose of the Coe file, you have to write the ip addresses in decimal rather than ipv4 format. 
 For the conversion between decimal and ipv4 formats, you can use online websites.
@@ -66,6 +66,7 @@ For the conversion between decimal and ipv4 formats, you can use online websites
 For instance, in our project, we had five kernels, three on CPU and two on FPGA. 
 For the kernels on CPU, we used ip address `10.1.2.101`, which is equal to `167838309` in decimal. 
 For the kernels on FPGA, we used ip address `10.1.5.8`, which is equal to `167838984` in decimal.
+As seen in the project, the first three IP addresses (for kernels 0, 1, 2) are set to the CPU address, and the last two IP addresses (for kernels 3 and 4) are set to the FPGA address. 
 Also, it is worth mentioning that you have to separate different ip addresses by writing three 0s like what we did in our example `0 0 0`. 
 Finally, save the file.
 
@@ -142,5 +143,15 @@ You will see that we have two `enc` and `dec` cores over there sandwiched by two
 You can add your IP cores here as well; just remember to add the FIFOs at the input/output of your cores.
 To be able to see your IP cores, you have to add the IP projects to `ipdefs/user_ipdefs` beforehand.
 Also, it is a good practice to take a look at our enc/dec HLS codes to find out how you could send and receive UDP packets.
-Also, you might need to modify the `input_switch` and `output_switch` based on the number of kernels you have in your project.
-Other than those, you should be okay, and you can do the compiling process again and work on your own project.
+Also, you might need to modify the `input_switch` and `output_switch` based on the number of kernels you have in your project. Other than those, you should be okay, and you can do the compiling process again and work on your own project.
+
+
+## Modifying the input_switch
+Open the `pr.bd` block diagram and the `applicationRegion` hierarchy. Double click on `input_switch`, and navigate to the `Routing` tab. This AXI-Stream switch is used to route packets to kernels based on the kernel ID specified in packet TDEST. For instance, in this project packets sent to kernel 3 (TDEST = 3) will be sent out of port `M03_AXIS`. You may need to modify the fields to suit your project. More output ports can be added in the `Switch Properties` tab by adjusting the `Number of master interfaces` option. 
+
+# Other Considerations
+## output_switch fix
+Open the `pr.bd` block diagram and the `applicationRegion` hierarchy. Double click on `output_switch`. This AXI-Stream switch is used to arbitrate access to the Galapagos router. The router does not support interleaving of packets from different sources. In other words, all flits from one packet must be sent to the router before the first flit of another packet can be sent. To ensure this, navigate to the `Switch Properties` tab of the `output_switch`, and set `Arbitrate on TLAST transfer` to `Yes`. `Arbitrate on maximum number of transfers` can be set to 0. 
+
+## Output Packets From Kernel
+Output packets from kernels are sent off-chip to the network using the GULF-Stream UDP interface. GULF-Stream requires that TKEEP bits be set properly for kernel output packets. This means that every TKEEP bit corresponding to a byte of valid data must be set to 1.
